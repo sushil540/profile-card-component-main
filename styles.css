@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+*,
+*::before,
+*::after{
+  padding: 0px;
+  margin: 0px;
+  box-sizing:border-box;
+}
+:root{
+--Dark-cyan: hsl(185, 75%, 39%);
+--Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+--Dark-grayish-blue: hsl(227, 10%, 46%);
+ /* Neutral */
+--Dark-gray: hsl(0, 0%, 59%);
+
+/* font */
+--Font-size (name and stats):18px;
+}
+
+html{
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+body{
+  background-color:var(--Dark-cyan);
+}
+
+.top,.bottom{
+  position:absolute;
+  z-index: -1;
+}
+
+.top{
+  top:-80%;
+  left:-25%;
+  width:100%;
+}
+
+.bottom{
+  bottom:0px;
+  left: 50%;
+  width:50%;
+  height:60%;
+}
+.svg::after{
+  content:url("images/bg-pattern-card.svg");
+}
+.card{
+  overflow:hidden;
+  margin:10% auto;
+  display:flex;
+  flex-direction: column;
+  width:350px;
+  height:auto;
+  background-color:white;
+  border-radius: 13px 13px 13px 13px;
+  transition: all .4s ease;
+}
+.image{
+  position:relative;
+  bottom:55px;
+  left:120px;
+  border-radius:55px;
+  border:5px solid white;
+}
+
+/* Start of styling caption  */
+.caption{
+  position:relative;
+  bottom:30px;
+  display: flex;
+  flex-direction: column;
+  place-items:center;
+  padding-bottom: 20px;
+  border-bottom:1px solid var(--Dark-gray);
+}
+#name{
+  font-weight: 700;
+}
+#integer{
+  font-weight: 400;
+  color:var(--Dark-gray);
+  margin-left:5px;
+}
+#city{
+  font-weight: 400;
+  margin-top:10px;
+  color:var(--Dark-gray);
+}
+/* End of styling caption  */
+
+/* Start styling items3  */
+.items-3{
+  margin:-15px 0 18px 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.f,.m,.l{
+  font-weight: 400;
+  display:inline-block;
+  color:var(--Dark-gray);
+  padding:0 20px;
+}
+
+#k80,#k803,#k1-4{
+ justify-content: center;
+ font-weight: 700;
+ display:flex;
+ margin-bottom:5px;
+ color:#000;
+}
+/* End styling items3 */
+
+
+/* Responsive page styling */
+@media (width:375px){
+.top{
+  width:70%;
+  height:70%;
+  top:0%;
+  left:0%;
+  transform:rotate(180deg);
+}
+.bottom{
+  width:55%;
+  height:80%;
+  bottom:-130px;
+  left:170px;
+}
+ .card{
+   margin:100px 30px;
+   width: 320px;
+ }
+.image{
+   left: 100px;
+}
+}
